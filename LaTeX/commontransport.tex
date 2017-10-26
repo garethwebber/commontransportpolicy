@@ -5,6 +5,7 @@
 \usepackage{tikz}
 \usepackage{longtable}
 \usepackage{fontspec}
+\usepackage{titlesec}	
 \setmainfont[Ligatures=TeX]{Myriad Pro}
 \newfontfamily\titlefont{Roboto}
 \usepackage[parfill]{parskip}
@@ -17,7 +18,7 @@
 \begin{titlepage}
 \newgeometry{left=7.5cm,top=8cm}
 \pagecolor{titlepagecolor}\color{white}
-{\noindent \titlefont \LARGE Towards A Common Transport Policy}\title{Towards A Common Transport Policy}\\
+{\noindent \titlefont \LARGE \bfseries Towards A Common Transport Policy}\title{Towards A Common Transport Policy}\\
 \makebox[0pt][l]{\rule{1.3\textwidth}{2pt}}
 \par {\noindent \titlefont \textcolor{namecolor}{Gareth Webber, BA(Hons) Cantab}}\author{Gareth Webber}
 \vskip 3cm
@@ -28,7 +29,12 @@
 \restoregeometry 
 \pagecolor{white}
 
+\titleformat{\chapter}[block]{\Huge\titlefont\bfseries}{\thechapter}{0ex}{\centering} []
+\tableofcontents
+\listoftables
+\listoffigures
 
+\titleformat{\chapter}[block]{\Huge\titlefont\bfseries}{\centering\thechapter\vskip -10pt}{0ex}{\centering\rule{0.3\textwidth}{2pt}\vskip 0pt\centering} []
 \input{"chapters/ch01-introduction.tex"}
 \input{"chapters/ch02-models-knowledge.tex"}	
 \input{"chapters/ch03-problemcommons.tex"}		
