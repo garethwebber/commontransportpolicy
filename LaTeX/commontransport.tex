@@ -6,6 +6,7 @@
 \usepackage{longtable}
 \usepackage{fontspec}
 \usepackage{titlesec}
+\usepackage{metalogo}
 \setmainfont[Ligatures=TeX]{Palatino}
 \newfontfamily\titlefont[Ligatures=TeX]{Roboto}
 \usepackage[parfill]{parskip}
@@ -31,7 +32,11 @@
 \pagecolor{white}
 
 \titleformat{\chapter}[block]{\Huge\titlefont\bfseries}{\thechapter}{0ex}{\centering} []
+\titleformat{\section}[block]{\Huge\titlefont\bfseries}{}{0ex}{\centering} []
+\input{"chapters/dedication.tex"}
+\setcounter{tocdepth}{0}
 \tableofcontents
+\setcounter{tocdepth}{1}
 \listoftables
 \listoffigures
 
