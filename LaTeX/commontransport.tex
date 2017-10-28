@@ -6,11 +6,12 @@
 \usepackage{longtable}
 \usepackage{fontspec}
 \usepackage{titlesec}
-\setmainfont[Ligatures=TeX]{Myriad Pro}
-\newfontfamily\titlefont{Roboto}
+\setmainfont[Ligatures=TeX]{Palatino}
+\newfontfamily\titlefont[Ligatures=TeX]{Roboto}
 \usepackage[parfill]{parskip}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{ \markboth{\thechapter.\ #1}{}}
 \definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
 \definecolor{namecolor}{cmyk}{0,0,.60,.10}
 \begin{document}
@@ -20,9 +21,9 @@
 \pagecolor{titlepagecolor}\color{white}
 {\noindent \titlefont \LARGE \bfseries Towards A Common Transport Policy}\title{Towards A Common Transport Policy}\\
 \makebox[0pt][l]{\rule{1.3\textwidth}{2pt}}
-\par {\noindent \titlefont \textcolor{namecolor}{Gareth Webber, BA(Hons) Cantab}}\author{Gareth Webber}
+\par {\noindent \titlefont \textcolor{namecolor}{Gareth Webber, BA(Hons) \textit{Cantab}}}\author{Gareth Webber}
 \vskip 3cm
-{\noindent \titlefont  Economics can be defined as the study of systems of allocation. Its goal is to find which systems are best able to allocate scarce resources so as to obtain maximal welfare. The purpose of this thesis is to examine the possible structures of systems which can be used to allocate transport facilities, based on an analysis of theoretical models and the history of transport policy in the UK and the European Union.}
+{\noindent Economics can be defined as the study of systems of allocation. Its goal is to find which systems are best able to allocate scarce resources so as to obtain maximal welfare. The purpose of this thesis is to examine the possible structures of systems which can be used to allocate transport facilities, based on an analysis of theoretical models and the history of transport policy in the UK and the European Union.}
 \par {\noindent  \textcolor{namecolor}{Supervised by: Professor John Hibbs, OBE, PhD, FCIT.}}
 \par {\noindent  \textcolor{namecolor}{September 21, 1997}}
 \end{titlepage}
