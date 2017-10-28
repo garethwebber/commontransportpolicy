@@ -1,22 +1,22 @@
 \documentclass[11pt]{report}
-\usepackage[a4paper, hmargin=1in, vmargin=1in,headheight=14pt]{geometry}
-\usepackage{csquotes}
-\usepackage{graphicx}
-\usepackage{tikz}
-\usepackage{longtable}
-\usepackage{fontspec}
-\usepackage{titlesec}
-\usepackage{metalogo}
+\usepackage[a4paper, hmargin=1in, vmargin=1in,headheight=14pt]{geometry} % Setup page layout
+\usepackage{csquotes} % Used for display quotes
+\usepackage{tikz} % Used for graphs
+\usepackage{longtable} % Used for longer tables
+\usepackage{fontspec} % Used to allow different fonts
+\usepackage{titlesec} % Ability to redefine chapter and section headings
+\usepackage{metalogo} % Latex Logos
 \setmainfont[Ligatures=TeX]{Palatino}
 \newfontfamily\titlefont[Ligatures=TeX]{Roboto}
-\usepackage[parfill]{parskip}
-\usepackage{fancyhdr}
+\usepackage[parfill]{parskip} % Line break and no-indent on paragraphs
+\usepackage{fancyhdr} % Header and footer config
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{ \markboth{\thechapter.\ #1}{}}
 \definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
 \definecolor{namecolor}{cmyk}{0,0,.60,.10}
 \begin{document}
 
+% Designed titlepage
 \begin{titlepage}
 \newgeometry{left=7.5cm,top=8cm}
 \pagecolor{titlepagecolor}\color{white}
@@ -31,6 +31,7 @@
 \restoregeometry 
 \pagecolor{white}
 
+% Plain Chapter and Section Headings for Into pages
 \titleformat{\chapter}[block]{\Huge\titlefont\bfseries}{\thechapter}{0ex}{\centering} []
 \titleformat{\section}[block]{\Huge\titlefont\bfseries}{}{0ex}{\centering} []
 \input{"chapters/dedication.tex"}
@@ -40,6 +41,7 @@
 \listoftables
 \listoffigures
 
+% Designed for main pages
 \titleformat{\chapter}[block]{\Huge\titlefont\bfseries}{\centering\thechapter\vskip -10pt}{0ex}{\centering\rule{0.3\textwidth}{2pt}\vskip 0pt\centering} []
 \input{"chapters/ch01-introduction.tex"}
 \input{"chapters/ch02-models-knowledge.tex"}	
@@ -49,6 +51,7 @@
 \input{"chapters/ch06-europe.tex"}
 \input{"chapters/ch07-conclusions.tex"}
 
+% Plain Chapter and Section Headings for bibliography
 \titleformat{\chapter}[block]{\Huge\titlefont\bfseries}{\thechapter}{0ex}{\centering} []
 \bibliography{research}
 \bibliographystyle{apalike}
