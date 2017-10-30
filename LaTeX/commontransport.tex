@@ -1,50 +1,24 @@
 \documentclass[11pt]{report}
-\usepackage[a4paper, hmargin=1in, vmargin=1in,headheight=14pt]{geometry} % Setup page layout
+\usepackage{modernreport}
 \usepackage{csquotes} % Used for display quotes
-\usepackage{tikz} % Used for graphs
 \usepackage{longtable} % Used for longer tables
-\usepackage{fontspec} % Used to allow different fonts
-\usepackage{titlesec} % Ability to redefine chapter and section headings
 \usepackage{metalogo} % Latex Logos
 \usepackage[authoryear,square]{natbib} % Bibliography Syling
-\setmainfont[Ligatures=TeX]{Palatino}
-\newfontfamily\titlefont[Ligatures=TeX]{Roboto}
-\usepackage[parfill]{parskip} % Line break and no-indent on paragraphs
-\usepackage{fancyhdr} % Header and footer config
-\pagestyle{fancy}
-\renewcommand{\chaptermark}[1]{ \markboth{\thechapter.\ #1}{}}
-\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
-\definecolor{namecolor}{cmyk}{0,0,.60,.10}
 \begin{document}
 
+\title{Towards A Common Transport Policy}
+\date{Supervised by: Professor John Hibbs, OBE, PhD, FCIT.\\ \\September 21, 1997}
+\author{Gareth Webber, BA(Hons) \textit{Cantab}}
+\covertext{Economics can be defined as the study of systems of allocation. Its goal is to find which systems are best able to allocate scarce resources so as to obtain maximal welfare. The purpose of this thesis is to examine the possible structures of systems which can be used to allocate transport facilities, based on an analysis of theoretical models and the history of transport policy in the UK and the European Union.}
+\maketitle
 
-% Designed titlepage
-\begin{titlepage}
-\newgeometry{left=7.5cm,top=8cm}
-\pagecolor{titlepagecolor}\color{white}
-{\noindent \titlefont \LARGE \bfseries Towards A Common Transport Policy}\title{Towards A Common Transport Policy}\\
-\makebox[0pt][l]{\rule{1.3\textwidth}{2pt}}
-\par {\noindent \titlefont \textcolor{namecolor}{Gareth Webber, BA(Hons) \textit{Cantab}}}\author{Gareth Webber}
-\vskip 3cm
-{\noindent Economics can be defined as the study of systems of allocation. Its goal is to find which systems are best able to allocate scarce resources so as to obtain maximal welfare. The purpose of this thesis is to examine the possible structures of systems which can be used to allocate transport facilities, based on an analysis of theoretical models and the history of transport policy in the UK and the European Union.}
-\par {\noindent  \textcolor{namecolor}{Supervised by: Professor John Hibbs, OBE, PhD, FCIT.}}
-\par {\noindent  \textcolor{namecolor}{September 21, 1997}}
-\end{titlepage}
-\restoregeometry 
-\pagecolor{white}
-
-% Plain Chapter and Section Headings for Into pages
-\titleformat{\chapter}[block]{\Huge\titlefont\bfseries}{\thechapter}{0ex}{\centering} []
-\titleformat{\section}[block]{\Huge\titlefont\bfseries}{}{0ex}{\centering} []
 \input{"chapters/dedication.tex"}
-\setcounter{tocdepth}{0}
+\setcounter{tocdepth}{0} % Hide sections
 \tableofcontents
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{1} % But show table elements
 \listoftables
 \listoffigures
 
-% Designed for main pages
-\titleformat{\chapter}[block]{\Huge\titlefont\bfseries}{\centering\thechapter\vskip -10pt}{0ex}{\centering\rule{0.3\textwidth}{2pt}\vskip 0pt\centering} []
 \input{"chapters/ch01-introduction.tex"}
 \input{"chapters/ch02-models-knowledge.tex"}	
 \input{"chapters/ch03-problemcommons.tex"}		
@@ -53,8 +27,6 @@
 \input{"chapters/ch06-europe.tex"}
 \input{"chapters/ch07-conclusions.tex"}
 
-% Plain Chapter and Section Headings for bibliography
-\titleformat{\chapter}[block]{\Huge\titlefont\bfseries}{\thechapter}{0ex}{\centering} []
 \bibliography{research}
 \bibliographystyle{apalike}
 
